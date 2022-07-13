@@ -135,6 +135,12 @@ Use the @threads macro:
   `Threads.@threads` julia macro. This might increase your runtime if you end up having
   a lot of allocations in code that doesn't need to allocate.
   
+  Note that Julia by default launches with 1 thread. If you are planning on using this
+  speed-up, launch the julia kernel with more threads as follows `julia -t [NUMBER-THREADS]`
+  or for an interactive shell such as IJulia in JupyterLab by changing the environment 
+  variable before opening a new shell - I have an alias to the following command
+  `export JULIA_NUM_THREADS=4; jupyter lab`.
+  
 </details>
 
 <details>
